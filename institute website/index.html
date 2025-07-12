@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>College Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+    <div id="main-content" class="min-h-screen bg-gray-100 font-sans text-gray-800 flex flex-col">
+        <nav class="bg-blue-800 p-4 shadow-lg sticky top-0 z-50">
+            <div class="container mx-auto flex justify-between items-center">
+                <div class="text-white text-2xl font-bold">
+                    <a href="index.html" id="nav-home-brand" class="hover:text-blue-200 transition-colors duration-200">
+                        College Hub
+                    </a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="mobile-menu-button" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path id="mobile-menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            <path id="mobile-menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Home</a>
+                    <a href="about-us.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
+                    <a href="academics.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Academics</a>
+                    <a href="research.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Research</a>
+                    <a href="admissions.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Admissions</a>
+                    <a href="notice.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Notice</a>
+                    <span id="welcome-message" class="text-blue-200 text-sm">Welcome, Guest!</span>
+                    <button
+                        id="logout-button"
+                        class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md"
+                    >
+                        Logout
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu-dropdown" class="md:hidden bg-blue-700 py-2 mt-2 rounded-md shadow-lg hidden">
+                <a href="index.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Home</a>
+                <a href="about-us.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">About Us</a>
+                <a href="academics.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Academics</a>
+                <a href="research.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Research</a>
+                <a href="admissions.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Admissions</a>
+                <a href="notice.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Notice</a>
+                <div class="px-4 py-2 text-blue-200 text-sm border-t border-blue-600 mt-2 pt-2">Welcome, Guest!</div>
+                <button
+                    id="logout-button-mobile"
+                    class="w-full text-left px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 font-semibold rounded-b-md"
+                >
+                    Logout
+                </button>
+            </div>
+        </nav>
+
+        <div id="page-content-area" class="container mx-auto p-8 flex-grow">
+            <div id="home-page-content" class="page-content bg-white p-8 rounded-lg shadow-xl text-center">
+                <h1 class="text-5xl font-extrabold text-blue-800 mb-6">Welcome to College Hub!</h1>
+                <p class="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
+                    Your central portal for all college information, resources, and updates.
+                </p>
+
+                <div id="carousel-container" class="relative w-full max-w-4xl mx-auto overflow-hidden rounded-lg shadow-lg mb-8">
+                    <div class="carousel-slide">
+                        <img src="https://www.collegeadmission.in/uploads/college/banner_image/amex-college-bardhaman-1059.jpg" alt="Modern Campus Building" class="w-full h-auto object-cover">
+                        <div class="carousel-caption">Modern Campus Building</div>
+                    </div>
+                    <div class="carousel-slide hidden">
+                        <img src="https://www.amexindia.in/images/img_4.jpg" alt="Students Collaborating" class="w-full h-auto object-cover">
+                        <div class="carousel-caption">Students Collaborating on Projects</div>
+                    </div>
+                    <div class="carousel-slide hidden">
+                        <img src="https://www.amexindia.in/images/img_2.jpg" alt="Library Interior" class="w-full h-auto object-cover">
+                        <div class="carousel-caption">Well-Equipped Library</div>
+                    </div>
+                    <div class="carousel-slide hidden">
+                        <img src="https://www.amexindia.in/images/img_4.jpg" alt="Lecture Hall View" class="w-full h-auto object-cover">
+                        <div class="carousel-caption">Spacious Lecture Halls</div>
+                    </div>
+
+                    <button id="carousel-prev" class="carousel-control carousel-prev-btn">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+                    </button>
+                    <button id="carousel-next" class="carousel-control carousel-next-btn">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+                    </button>
+
+                    <div id="carousel-dots" class="carousel-dots-container"></div>
+                </div>
+
+                <div class="info-card mt-8">
+                    <h3 class="text-2xl font-bold text-indigo-700 mb-3">Latest Announcements</h3>
+                    <div id="announcements-container" class="w-full text-left">
+                        <ul class="list-disc list-inside text-gray-700 space-y-2">
+                            <li><span class="font-semibold">New Academic Year Begins!</span> - 2025-08-01: Classes for all programs will commence on August 1st, 2025. Students are advised to check their timetables.</li>
+                            <li><span class="font-semibold">Annual Tech Fest Registration Open</span> - 2025-07-25: Register now for our annual Tech Fest! Exciting workshops and competitions await.</li>
+                            <li><span class="font-semibold">Guest Lecture on AI Ethics</span> - 2025-07-20: Join us for a special lecture on AI Ethics by Dr. Jane Doe on July 20th at 10 AM in Auditorium A.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                    <div class="info-card">
+                        <h3 class="text-2xl font-bold text-blue-700 mb-3">Latest News</h3>
+                        <ul class="text-gray-700 text-left space-y-2">
+                            <li><a href="#" class="text-blue-600 hover:underline">Annual Sports Meet Concludes Successfully!</a></li>
+                            <li><a href="#" class="text-blue-600 hover:underline">New Research Grant Awarded to Physics Dept.</a></li>
+                            <li><a href="admissions.html" class="text-blue-600 hover:underline">Admissions Open for Postgraduate Programs</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3 class="text-2xl font-bold text-green-700 mb-3">Upcoming Events</h3>
+                        <ul class="text-gray-700 text-left space-y-2">
+                            <li><a href="#" class="text-green-600 hover:underline">Tech Fest 2025 - Oct 20-22</a></li>
+                            <li><a href="#" class="text-green-600 hover:underline">Alumni Reunion - Nov 15</a></li>
+                            <li><a href="#" class="text-green-600 hover:underline">Annual Cultural Night - Dec 5</a></li>
+                        </ul>
+                    </div>
+                    <div class="info-card">
+                        <h3 class="text-2xl font-bold text-purple-700 mb-3">Quick Links</h3>
+                        <ul class="text-gray-700 text-left space-y-2">
+                            <li><a href="admissions.html" class="text-purple-600 hover:underline">Apply Now</a></li>
+                            <li><a href="academics.html" class="text-purple-600 hover:underline">Academic Programs</a></li>
+                            <li><a href="notice.html" class="text-purple-600 hover:underline">Notices</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

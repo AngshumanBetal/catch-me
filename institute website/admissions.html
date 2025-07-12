@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - College Hub</title>
+    <!-- Link to the external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Load Inter font from Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+    <!-- Navigation Bar (Copied from index.html for consistency) -->
+    <nav class="bg-blue-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">
+                <a href="index.html" id="nav-home-brand" class="hover:text-blue-200 transition-colors duration-200">
+                    College Hub
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="mobile-menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="mobile-menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Desktop navigation links -->
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Home</a>
+                <a href="about-us.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
+                <a href="academics.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Academics</a>
+                <a href="research.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Research</a>
+                <a href="admissions.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Admissions</a>
+                <a href="notice.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Notice</a>
+                <span id="welcome-message" class="text-blue-200 text-sm">Welcome, Guest!</span>
+                <button
+                    id="logout-button"
+                    class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md"
+                >
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu dropdown -->
+        <div id="mobile-menu-dropdown" class="md:hidden bg-blue-700 py-2 mt-2 rounded-md shadow-lg hidden">
+            <a href="index.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Home</a>
+            <a href="about-us.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">About Us</a>
+            <a href="academics.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Academics</a>
+            <a href="research.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Research</a>
+            <a href="admissions.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Admissions</a>
+            <a href="notice.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Notice</a>
+            <div class="px-4 py-2 text-blue-200 text-sm border-t border-blue-600 mt-2 pt-2">Welcome, Guest!</div>
+            <button
+                id="logout-button-mobile"
+                class="w-full text-left px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 font-semibold rounded-b-md"
+            >
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <!-- Admissions Page Content -->
+    <div id="admissions-page-content" class="page-content container mx-auto p-8 flex-grow">
+        <h1 class="text-4xl font-bold text-green-800 mb-6">Admissions Information</h1>
+        <p class="text-lg text-gray-700 mb-8">
+            Welcome to our Admissions page! Here you will find all the necessary information to apply to our esteemed college.
+        </p>
+
+        <h2 class="text-3xl font-bold text-green-700 mb-6">Programs Offered</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div class="bg-green-50 p-6 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-bold text-green-700 mb-3">BCA (Honours)</h3>
+                <p class="text-gray-600">Eligibility :- Higher Secondary Examination (10+2) should comprise Mathematics/Business Mathematics/Computer Science or Computer Application/Statistics.
+Course Fee :- Rs. 14000/- Per Semester.
+Bachelor of Computer Applications (BCA) is a 4 years undergraduate Honours degree course which is divided into 8 semesters. Students will be taught subjects which are related to the technological applications that are required in today’s practical work field.</p>
+                <button class="mt-4 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-200 font-semibold">Learn More</button>
+            </div>
+            <div class="bg-green-50 p-6 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-bold text-green-700 mb-3">BBA (Honours)</h3>
+                <p class="text-gray-600">Eligibility :- Higher Secondary Examination (10+2) in any stream.
+Course Fee :- Rs. 11500/- Per Semester.
+Bachelor of Business Administration (BBA) is a 4 years undergraduate Honours degree course which is divided into 8 semesters. BBA Course is designed to provide a basic understanding of management education and to train the students in communication skills effectively, which inculcate entrepreneurship skills and decision making.</p>
+                <button class="mt-4 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-200 font-semibold">Learn More</button>
+            </div>
+            <div class="bg-green-50 p-6 rounded-lg shadow-md text-center">
+                <h3 class="text-2xl font-bold text-green-700 mb-3">BBA (Tourism & Hospitality)</h3>
+                <p class="text-gray-600">Eligibility :- Higher Secondary Examination (10+2) in any stream.
+Course Fee :- Rs. 25000/- Per Semester.
+Bachelor of Business Administration in Hospitality & Tourism (BBA T&H) is a 4 years undergraduate Honours degree course which is divided into 8 semesters.The program has been designed to offer eligible candidates an advanced specialization in any of the various aspects of the hospitality industry, such as operations, front office, housekeeping, food and beverages, accounting, engineering/ maintenance, sales, public relations, security, etc.
+</p>
+                <button class="mt-4 bg-green-600 text-white py-2 px-4 rounded-md hover:bg-green-700 transition-colors duration-200 font-semibold">Learn More</button>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Application Process Section -->
+            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Application Process</h2>
+                <ol class="list-decimal list-inside text-gray-700 space-y-3">
+                    <li>
+                        <span class="font-semibold">Review Requirements:</span> Check the eligibility criteria for your desired program.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Prepare Documents:</span> Gather all required documents (transcripts, certificates, etc.).
+                    </li>
+                    <li>
+                        <span class="font-semibold">Fill Online Application:</span> Complete the application form accurately.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Pay Application Fee:</span> Submit the non-refundable application fee.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Submit Application:</span> Ensure all sections are complete before submission.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Interview (if applicable):</span> Attend the interview if shortlisted.
+                    </li>
+                    <li>
+                        <span class="font-semibold">Admission Decision:</span> Await the admission decision notification.
+                    </li>
+                </ol>
+            </div>
+
+            <!-- Key Dates & Deadlines Section -->
+            <div class="bg-green-50 p-6 rounded-lg shadow-md">
+                <h2 class="text-3xl font-bold text-green-700 mb-4">Key Dates & Deadlines</h2>
+                <ul class="text-gray-700 space-y-3">
+                    <li class="flex items-center">
+                        <span class="font-semibold">Application Open:</span> October 1st, 2024
+                    </li>
+                    <li class="flex items-center">
+                        <span class="font-semibold">Early Bird Deadline:</span> December 15th, 2024
+                    </li>
+                    <li class="flex items-center">
+                        <span class="font-semibold">Regular Deadline:</span> March 1st, 2025
+                    </li>
+                    <li class="flex items-center">
+                        <span class="font-semibold">Decision Notification:</span> April 15th, 2025
+                    </li>
+                </ul>
+                <p class="mt-6 text-sm text-gray-600">
+                    For detailed requirements and to start your application, please visit our official admissions portal.
+                </p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLScdoOfyjkUIF6G8sLWAVYMpheI0XNboR7X-FvbeJdXFQUnb1Q/viewform?usp=dialog" target="_blank" class="mt-5 inline-block bg-green-600 text-white py-2 px-5 rounded-md hover:bg-green-700 transition-colors duration-200 font-semibold shadow-lg">
+                    Start Your Application
+                </a>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center">
+            <h2 class="text-3xl font-bold text-green-800 mb-4">Contact Admissions</h2>
+            <p class="text-lg text-gray-700">
+                Have questions? Our admissions team is here to help!
+            </p>
+            <p class="text-lg text-gray-700 mt-2">
+                Email: <a href="mailto:angshumanbetal62@gmail.com" class="text-green-600 hover:underline">angshumanbetal62@gmail.com</a>
+            </p>
+            <p class="text-lg text-gray-700 mt-2">
+                Phone: <a href="tel:+123456789" class="text-green-600 hover:underline">+1 (234) 567-89</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

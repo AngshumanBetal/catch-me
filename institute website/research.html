@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - College Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+    <nav class="bg-blue-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">
+                <a href="index.html" id="nav-home-brand" class="hover:text-blue-200 transition-colors duration-200">
+                    College Hub
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="mobile-menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="mobile-menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Home</a>
+                <a href="about-us.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
+                <a href="academics.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Academics</a>
+                <a href="research.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Research</a>
+                <a href="admissions.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Admissions</a>
+                <a href="notice.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Notice</a>
+                <span id="welcome-message" class="text-blue-200 text-sm">Welcome, Guest!</span>
+                <button
+                    id="logout-button"
+                    class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md"
+                >
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu-dropdown" class="md:hidden bg-blue-700 py-2 mt-2 rounded-md shadow-lg hidden">
+            <a href="index.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Home</a>
+            <a href="about-us.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">About Us</a>
+            <a href="academics.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Academics</a>
+            <a href="research.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Research</a>
+            <a href="admissions.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Admissions</a>
+            <a href="notice.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Notice</a>
+            <div class="px-4 py-2 text-blue-200 text-sm border-t border-blue-600 mt-2 pt-2">Welcome, Guest!</div>
+            <button
+                id="logout-button-mobile"
+                class="w-full text-left px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 font-semibold rounded-b-md"
+            >
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <div id="research-page-content" class="page-content container mx-auto p-8 flex-grow">
+        <h1 class="text-4xl font-bold text-blue-800 mb-6">Research & Innovation</h1>
+        <p class="text-lg text-gray-700 mb-8">
+            Our college is dedicated to fostering a vibrant research environment, encouraging faculty and students to engage in groundbreaking studies and innovative projects across various disciplines.
+        </p>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Research Areas</h2>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li>Artificial Intelligence & Machine Learning</li>
+            <li>Data Science & Analytics</li>
+            <li>Business Management & Strategy</li>
+            <li>Cybersecurity & Network Security</li>
+            <li>E-commerce & Digital Marketing</li>
+            <li>Financial Technology (FinTech)</li>
+            <li>Human-Computer Interaction (HCI)</li>
+            <li>Operations Research & Supply Chain Management</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Current Projects (Highlights)</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 1: AI for Predictive Business Analytics</h3>
+                <p class="text-gray-600 text-sm">This project focuses on leveraging AI and machine learning to analyze historical data, identify hidden patterns, and forecast future business outcomes. It aims to enhance decision-making, optimize operations, and provide deeper insights into market trends and consumer behavior, ultimately giving businesses a competitive edge.</p>
+                <a href="project1.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 2: Blockchain for Secure Data Management</h3>
+                <p class="text-gray-600 text-sm">This research initiative delves into the transformative potential of blockchain technology to enhance cybersecurity and data management across diverse applications. It focuses on leveraging blockchain's inherent decentralized and immutable characteristics to create robust frameworks for safeguarding sensitive information, ensuring data integrity, and promoting transparency in digital ecosystems.</p>
+                <a href="project2.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 3: E-commerce Personalization Engine</h3>
+                <p class="text-gray-600 text-sm">This project focuses on developing an E-commerce Personalization Engine that leverages Artificial Intelligence (AI) and Machine Learning (ML) to tailor shopping experiences for individual users. By analyzing customer data, the engine aims to provide highly relevant product recommendations, optimize marketing strategies, and enhance overall customer satisfaction and engagement.</p>
+                <a href="project3.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 4: Student Information System Development</h3>
+                <p class="text-gray-600 text-sm">This project focuses on developing a comprehensive Student Information System (SIS) designed to automate administrative and academic needs within an educational institution. An SIS centralizes student data, streamlines processes like scheduling and grading, and enhances communication, ultimately improving overall efficiency and supporting data-driven decision-making.</p>
+                <a href="project4.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 5: Cybersecurity Threat Detection System</h3>
+                <p class="text-gray-600 text-sm">This research project focuses on developing advanced cybersecurity threat detection systems to combat the increasing volume and sophistication of cyber threats. It aims to create intelligent solutions that can automatically detect vulnerabilities, analyze malware, and respond to attacks more effectively than traditional methods.</p>
+                <a href="project5.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 6: Supply Chain Optimization using AI</h3>
+                <p class="text-gray-600 text-sm">This research project explores how Artificial Intelligence (AI) can revolutionize supply chain management by enhancing efficiency, reactivity, and resilience. It focuses on leveraging AI to optimize logistics, inventory, demand forecasting, and risk management, transforming traditional supply chain methodologies.</p>
+                <a href="project6.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 7: Financial Fraud Detection with Machine Learning</h3>
+                <p class="text-gray-600 text-sm">This research project focuses on developing advanced financial fraud detection systems using Machine Learning (ML) and Deep Learning (DL) techniques. It aims to combat sophisticated deceptive practices like credit card fraud, insurance fraud, and money laundering, which result in significant financial losses and erode trust in financial systems.</p>
+                <a href="project7.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 8: User Experience (UX) Design for Mobile Apps</h3>
+                <p class="text-gray-600 text-sm">This project focuses on enhancing User Experience (UX) design for mobile applications, drawing insights from Human-Computer Interaction (HCI) research. It aims to create intuitive, engaging, and purposeful interfaces that resonate with users, leveraging innovative prototyping methods and human-centered AI approaches.</p>
+                <a href="project8.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 9: Big Data Analytics for Healthcare Management</h3>
+                <p class="text-gray-600 text-sm">This research project explores the pivotal role of Big Data Analytics in transforming healthcare practices and research. It focuses on developing tools and methodologies to accumulate, manage, analyze, and assimilate large volumes of disparate, structured, and unstructured data generated by modern healthcare systems, ultimately leading to improved patient care and operational efficiency.</p>
+                <a href="project9.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+            <div class="bg-blue-50 p-6 rounded-lg shadow-md">
+                <h3 class="text-xl font-semibold text-blue-700 mb-2">Project 10: Digital Transformation Strategies for SMEs</h3>
+                <p class="text-gray-600 text-sm">This research project focuses on developing effective Digital Transformation (DT) strategies for Small and Medium Enterprises (SMEs). Despite their crucial role in economic growth, many SMEs lag behind larger firms in adopting digital technologies due to resource constraints, skill gaps, and technical barriers. This project aims to provide a practical roadmap for SMEs to enhance their operational efficiency, strengthen customer relationships, and gain wider market access in an increasingly digital business environment.</p>
+                <a href="project10.html" class="text-blue-600 hover:underline text-sm mt-2 inline-block">Learn More</a>
+            </div>
+        </div>
+
+        <div class="mt-10 text-center">
+            <h2 class="text-3xl font-bold text-blue-800 mb-4">Join Our Research Community</h2>
+            <p class="text-lg text-gray-700">
+                Interested in contributing to cutting-edge research? Contact our research office for opportunities.
+            </p>
+            <p class="text-lg text-gray-700 mt-2">
+                Email: <a href="mailto:research@college.edu" class="text-blue-600 hover:underline">research@college.edu</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

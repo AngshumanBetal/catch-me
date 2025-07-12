@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 8: User Experience (UX) Design for Mobile Apps - College Hub Research</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+    <nav class="bg-blue-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">
+                <a href="index.html" id="nav-home-brand" class="hover:text-blue-200 transition-colors duration-200">
+                    College Hub
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="mobile-menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="mobile-menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Home</a>
+                <a href="about-us.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
+                <a href="academics.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Academics</a>
+                <a href="research.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Research</a>
+                <a href="admissions.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Admissions</a>
+                <a href="notice.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Notice</a>
+                <span id="welcome-message" class="text-blue-200 text-sm">Welcome, Guest!</span>
+                <button
+                    id="logout-button"
+                    class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md"
+                >
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu-dropdown" class="md:hidden bg-blue-700 py-2 mt-2 rounded-md shadow-lg hidden">
+            <a href="index.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Home</a>
+            <a href="about-us.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">About Us</a>
+            <a href="academics.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Academics</a>
+            <a href="research.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Research</a>
+            <a href="admissions.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Admissions</a>
+            <a href="notice.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Notice</a>
+            <div class="px-4 py-2 text-blue-200 text-sm border-t border-blue-600 mt-2 pt-2">Welcome, Guest!</div>
+            <button
+                id="logout-button-mobile"
+                class="w-full text-left px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 font-semibold rounded-b-md"
+            >
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <div id="project8-page-content" class="page-content container mx-auto p-8 flex-grow">
+        <h1 class="text-4xl font-bold text-blue-800 mb-6">Project 8: User Experience (UX) Design for Mobile Apps</h1>
+        <p class="text-lg text-gray-700 mb-8">
+            This project focuses on enhancing User Experience (UX) design for mobile applications, drawing insights from Human-Computer Interaction (HCI) research. It aims to create intuitive, engaging, and purposeful interfaces that resonate with users, leveraging innovative prototyping methods and human-centered AI approaches.
+        </p>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Core Principles of UX Design for Mobile Apps</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            Effective mobile UX design centers on understanding user behavior and creating seamless interactions:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li><span class="font-semibold">User-Centric Approach:</span> Designing with the user's needs, goals, and context at the forefront.</li>
+            <li><span class="font-semibold">Intuitive Navigation:</span> Ensuring users can easily find what they need and understand how to interact with the app.</li>
+            <li><span class="font-semibold">Responsiveness:</span> Adapting the interface seamlessly across various mobile devices and screen sizes.</li>
+            <li><span class="font-semibold">Performance Optimization:</span> Ensuring fast loading times and smooth interactions to prevent user frustration.</li>
+            <li><span class="font-semibold">Accessibility:</span> Designing for all users, including those with disabilities, to ensure inclusivity.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Leveraging Advanced HCI Research</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            This project incorporates cutting-edge HCI research to push the boundaries of mobile UX:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li><span class="font-semibold">UI Prototyping Through Interactive Conceptual Blending:</span> Inspired by "Misty," this approach allows for rapidly incorporating diverse elements from existing design examples (screenshots, sketches) into new or in-progress UIs. It streamlines the creative workflow and fosters collaboration between designers and developers. [9, 10, 11, 12]</li>
+            <li><span class="font-semibold">Human-in-the-Loop Data Augmentation:</span> Drawing from "Exploring Empty Spaces," this involves integrating human input to guide AI processes, such as generating diverse data for model safety prompts, which can be applied to refine user feedback analysis. [9, 13, 14, 15]</li>
+            <li><span class="font-semibold">Designing for "Ikigai":</span> Embracing the CHI 2025 conference theme, the project aims to design interfaces that are not just functional but also meaningful and purposeful for users, balancing agency, passion, capabilities, and impact. [16, 9]</li>
+            <li><span class="font-semibold">Human-AI Collaboration:</span> Exploring how AI can enhance social-emotional learning or sign language generation, demonstrating the potential for AI to mediate and enrich human interaction. [9]</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Benefits and Impact</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            The outcomes of this project aim to significantly improve mobile app usability and user satisfaction:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li><span class="font-semibold">Accelerated Prototyping:</span> Tools inspired by conceptual blending can significantly speed up the design and iteration process.</li>
+            <li><span class="font-semibold">Enhanced Creativity:</span> Facilitates the exploration of novel design ideas through intelligent blending and augmentation.</li>
+            <li><span class="font-semibold">Improved Collaboration:</span> Bridges the gap between designers and developers, fostering a more fluid and effective workflow.</li>
+            <li><span class="font-semibold">More Engaging User Experiences:</span> Designing with purpose and user psychology in mind leads to apps that users love to use.</li>
+            <li><span class="font-semibold">Reduced Development Costs:</span> Efficient prototyping and clear design intent minimize rework.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Challenges and Future Directions</h2>
+        <p class="text-lg text-gray-700 mb-8">
+            Challenges include the complexity of integrating advanced AI models into design tools and ensuring that AI-generated suggestions truly align with human design intent. Future directions involve further refining human-AI collaboration in design, exploring multimodal AI for deeper UI understanding, and developing lightweight, on-device solutions for enhanced privacy and low latency. The field continues to evolve rapidly, with conferences like ACM CHI driving innovation in interactive technology. [16, 9]
+        </p>
+
+        <div class="mt-10 text-center">
+            <p class="text-lg text-gray-700">
+                For more details on this project or to explore collaboration opportunities, please contact our research department.
+            </p>
+            <p class="text-lg text-gray-700 mt-2">
+                Email: <a href="mailto:research@college.edu" class="text-blue-600 hover:underline">research@college.edu</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

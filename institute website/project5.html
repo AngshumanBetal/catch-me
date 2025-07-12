@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 5: Cybersecurity Threat Detection System - College Hub Research</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+    <nav class="bg-blue-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">
+                <a href="index.html" id="nav-home-brand" class="hover:text-blue-200 transition-colors duration-200">
+                    College Hub
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="mobile-menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="mobile-menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Home</a>
+                <a href="about-us.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
+                <a href="academics.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Academics</a>
+                <a href="research.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Research</a>
+                <a href="admissions.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Admissions</a>
+                <a href="notice.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Notice</a>
+                <span id="welcome-message" class="text-blue-200 text-sm">Welcome, Guest!</span>
+                <button
+                    id="logout-button"
+                    class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md"
+                >
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu-dropdown" class="md:hidden bg-blue-700 py-2 mt-2 rounded-md shadow-lg hidden">
+            <a href="index.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Home</a>
+            <a href="about-us.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">About Us</a>
+            <a href="academics.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Academics</a>
+            <a href="research.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Research</a>
+            <a href="admissions.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Admissions</a>
+            <a href="notice.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Notice</a>
+            <div class="px-4 py-2 text-blue-200 text-sm border-t border-blue-600 mt-2 pt-2">Welcome, Guest!</div>
+            <button
+                id="logout-button-mobile"
+                class="w-full text-left px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 font-semibold rounded-b-md"
+            >
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <div id="project5-page-content" class="page-content container mx-auto p-8 flex-grow">
+        <h1 class="text-4xl font-bold text-blue-800 mb-6">Project 5: Cybersecurity Threat Detection System</h1>
+        <p class="text-lg text-gray-700 mb-8">
+            This research project focuses on developing advanced cybersecurity threat detection systems to combat the increasing volume and sophistication of cyber threats. It aims to create intelligent solutions that can automatically detect vulnerabilities, analyze malware, and respond to attacks more effectively than traditional methods.
+        </p>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">The Evolving Threat Landscape</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            Cyber threats are becoming increasingly complex, including Distributed Denial of Service (DDoS) attacks, phishing, man-in-the-middle attacks, password attacks, remote attacks, privilege escalation, and various forms of malware. Traditional protection systems like firewalls, intrusion detection systems, and antivirus software are often no longer effective against these new-generation attacks and evasion techniques, necessitating innovative solutions. [1]
+        </p>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Leveraging Advanced Technologies</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            This project explores the application of trending technologies to enhance cybersecurity:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li><span class="font-semibold">Machine Learning (ML) & Deep Learning (DL):</span> These technologies offer promising solutions for detecting malware, intrusion, spam, DNS attacks, fraud, hidden channels, and advanced persistent threats. [1]</li>
+            <li><span class="font-semibold">Large Language Models (LLMs):</span> LLMs are being applied to an expanding range of cybersecurity tasks, including vulnerability detection, malware analysis, network intrusion detection, and phishing detection. They can analyze and interpret security reports, threat intelligence feeds, and logs to identify emerging threats. [2, 3]</li>
+            <li><span class="font-semibold">AI Agents:</span> Intelligent agents powered by LLMs can automate complex tasks, improve operational efficiency, and enable reasoning-driven security analytics. [3]</li>
+            <li><span class="font-semibold">Blockchain & Distributed Ledger Technology (DLT):</span> These are explored for enhancing data integrity, transparency, and overall security frameworks. [4]</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Key Applications and Focus Areas</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            The system aims to provide solutions across several critical cybersecurity domains:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li><span class="font-semibold">Vulnerability Detection:</span> Identifying vulnerable code snippets and generating effective patches. [2]</li>
+            <li><span class="font-semibold">Malware Analysis:</span> Classifying malware families and detecting malicious domains/URLs. [2]</li>
+            <li><span class="font-semibold">Network Intrusion Detection:</span> Detecting and classifying various types of attacks from network traffic data (e.g., DDoS, port scanning, botnet traffic). [2]</li>
+            <li><span class="font-semibold">Phishing Detection:</span> Analyzing email contents and identifying deceptive language patterns. [2]</li>
+            <li><span class="font-semibold">Security Policy Analysis:</span> Understanding and analyzing higher-level security policies to classify documents and detect potential violations. [2]</li>
+            <li><span class="font-semibold">Generative Security Engineering:</span> Using LLMs to generate adversarial examples for testing security classifiers and simulating realistic attack scenarios. [2]</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Challenges and Future Directions</h2>
+        <p class="text-lg text-gray-700 mb-8">
+            Despite the promising advancements, challenges remain. Some ML and DL solutions are not inherently resistant to evasion techniques, which intelligent cyber attackers can exploit. [1] Future research focuses on developing more robust and resilient systems, leveraging LLMs' cross-domain knowledge and reasoning capabilities to adapt to evolving threats. The IEEE CSR conference highlights topics like 5G/B5G cybersecurity, cloud-edge security, and the human factor in cyber resilience, emphasizing the need for continuous innovation. [4]
+        </p>
+
+        <div class="mt-10 text-center">
+            <p class="text-lg text-gray-700">
+                For more details on this project or to explore collaboration opportunities, please contact our research department.
+            </p>
+            <p class="text-lg text-gray-700 mt-2">
+                Email: <a href="mailto:research@college.edu" class="text-blue-600 hover:underline">research@college.edu</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

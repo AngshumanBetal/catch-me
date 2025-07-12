@@ -1,0 +1,881 @@
+/* Basic Reset and Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+html {
+    height: 100%; /* Ensure html takes full height for body gradient */
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Animated gradient background */
+    background: linear-gradient(-45deg, #00DDFF, #00FFC5, #FFD700, #FF2100);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite; /* Smoother, slower animation */
+    color: #2c3e50; /* Darker text for better contrast */
+    line-height: 1.6;
+    min-height: 100vh; /* Ensure body takes full viewport height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Keyframes for the animated gradient background */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Page Load Fade-in and Slide-up Animation [1, 2, 3] */
+#main-content {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInSlideUp 1s ease-out forwards;
+    animation-delay: 0.3s; /* Delay to let initial background load */
+}
+
+@keyframes fadeInSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Utility Classes (mimicking Tailwind for responsiveness and common styles) */
+.min-h-screen {
+    min-height: 100vh;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.flex-grow {
+    flex-grow: 1;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.container {
+    max-width: 1280px; /* Equivalent to container mx-auto */
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%; /* Ensure it takes full width within its parent */
+}
+
+.p-4 {
+    padding: 1rem; /* 16px */
+}
+
+.p-8 {
+    padding: 2rem; /* 32px */
+}
+
+.py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+}
+
+.px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+}
+
+.rounded-lg {
+    border-radius: 0.75rem; /* Slightly more rounded */
+}
+
+.rounded-md {
+    border-radius: 0.5rem; /* Slightly more rounded */
+}
+
+.rounded-full {
+    border-radius: 9999px; /* For pills/badges */
+}
+
+/* Enhanced Shadows for depth */
+.shadow-lg {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.shadow-md {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08), 0 3px 6px rgba(0, 0, 0, 0.04);
+}
+
+.shadow-xl {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15), 0 10px 20px rgba(0, 0, 0, 0.07);
+}
+
+.shadow-2xl {
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25), 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-sm {
+    font-size: 0.875rem; /* 14px */
+}
+
+.text-xs {
+    font-size: 0.75rem; /* 12px */
+}
+
+.text-lg {
+    font-size: 1.125rem; /* 18px */
+}
+
+.text-2xl {
+    font-size: 1.5rem; /* 24px */
+}
+
+.text-4xl {
+    font-size: 2.25rem; /* 36px */
+}
+
+.text-5xl {
+    font-size: 3rem; /* 48px */
+}
+
+.font-medium {
+    font-weight: 500;
+}
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.font-extrabold {
+    font-weight: 800;
+}
+
+.mb-2 {
+    margin-bottom: 0.5rem;
+}
+
+.mb-3 {
+    margin-bottom: 0.75rem;
+}
+
+.mb-4 {
+    margin-bottom: 1rem;
+}
+
+.mb-5 {
+    margin-bottom: 1.25rem;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem;
+}
+
+.mb-8 {
+    margin-bottom: 2rem;
+}
+
+.mt-1 {
+    margin-top: 0.25rem;
+}
+
+.mt-2 {
+    margin-top: 0.5rem;
+}
+
+.mt-4 {
+    margin-top: 1rem;
+}
+
+.mt-5 {
+    margin-top: 1.25rem;
+}
+
+.mt-6 {
+    margin-top: 1.5rem;
+}
+
+.mt-8 {
+    margin-top: 2rem;
+}
+
+.mt-10 {
+    margin-top: 2.5rem;
+}
+
+.mt-auto {
+    margin-top: auto;
+}
+
+.pt-2 {
+    padding-top: 0.5rem;
+}
+
+.space-y-2 > *:not([hidden]) ~ *:not([hidden]) {
+    margin-top: 0.5rem;
+}
+
+.space-y-3 > *:not([hidden]) ~ *:not([hidden]) {
+    margin-top: 0.75rem;
+}
+
+.space-y-4 > *:not([hidden]) ~ *:not([hidden]) {
+    margin-top: 1rem;
+}
+
+.space-y-6 > *:not([hidden]) ~ *:not([hidden]) {
+    margin-top: 1.5rem;
+}
+
+.space-x-6 > *:not([hidden]) ~ *:not([hidden]) {
+    margin-left: 1.5rem;
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+
+.gap-8 {
+    gap: 2rem;
+}
+
+.w-full {
+    width: 100%;
+}
+
+.max-w-md {
+    max-width: 28rem; /* 448px */
+}
+
+.max-w-2xl {
+    max-width: 42rem; /* 672px */
+}
+
+.max-w-3xl {
+    max-width: 48rem; /* 768px */
+}
+
+.max-w-4xl {
+    max-width: 56rem; /* 896px */
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.object-cover {
+    object-fit: cover;
+}
+
+.h-auto {
+    height: auto;
+}
+
+.border {
+    border-width: 1px;
+}
+
+.border-gray-300 {
+    border-color: #d1d5db;
+}
+
+.border-t {
+    border-top-width: 1px;
+}
+
+.border-blue-600 {
+    border-color: #2563eb;
+}
+
+.block {
+    display: block;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}
+
+.inset-y-0 {
+    top: 0;
+    bottom: 0;
+}
+
+.right-0 {
+    right: 0;
+}
+
+.left-0 {
+    left: 0;
+}
+
+.bottom-0 {
+    bottom: 0;
+}
+
+.pr-3 {
+    padding-right: 0.75rem;
+}
+
+.pr-10 {
+    padding-right: 2.5rem;
+}
+
+.leading-5 {
+    line-height: 1.25rem;
+}
+
+.self-start {
+    align-self: flex-start;
+}
+
+.list-decimal {
+    list-style-type: decimal;
+}
+
+.list-disc {
+    list-style-type: disc;
+}
+
+.list-inside {
+    list-style-position: inside;
+}
+
+/* Colors - Adjusted for a more vibrant feel */
+.bg-white { background-color: #ffffff; }
+.bg-gray-100 { background-color: #f0f2f5; } /* Adjusted */
+.bg-gray-50 { background-color: #f9fafb; } /* New light gray for info-cards */
+.bg-gradient-to-br { background-image: linear-gradient(to bottom right, #4a90e2, #6a5acd); } /* More vibrant gradient */
+.from-blue-500 { --tw-gradient-from: #4a90e2; --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(74, 144, 226, 0)); }
+.to-indigo-600 { --tw-gradient-to: #6a5acd; }
+.bg-blue-800 { background-color: #1a3a6b; } /* Darker blue for nav */
+.bg-blue-700 { background-color: #2a5298; } /* Darker blue for mobile nav */
+.bg-blue-600 { background-color: #3468c0; } /* Slightly adjusted blue */
+.bg-blue-50 { background-color: #e6f0ff; } /* Lighter blue for cards */
+.bg-red-600 { background-color: #e74c3c; } /* More vibrant red */
+.bg-green-600 { background-color: #27ae60; } /* More vibrant green */
+.bg-green-50 { background-color: #e8f8f5; } /* Lighter green for cards */
+.bg-purple-600 { background-color: #8e44ad; } /* More vibrant purple */
+.bg-purple-50 { background-color: #f4e6f7; } /* Lighter purple for cards */
+.bg-purple-200 { background-color: #d8bfd8; } /* Adjusted */
+.bg-indigo-600 { background-color: #5d3fbc; } /* More vibrant indigo */
+.bg-indigo-50 { background-color: #ede9f7; } /* Lighter indigo for cards */
+
+.text-gray-900 { color: #212121; }
+.text-gray-800 { color: #2c3e50; } /* Adjusted */
+.text-gray-700 { color: #34495e; } /* Adjusted */
+.text-gray-600 { color: #7f8c8d; } /* Adjusted */
+.text-gray-500 { color: #95a5a6; } /* Adjusted */
+.text-blue-800 { color: #1a3a6b; } /* Adjusted */
+.text-blue-700 { color: #2a5298; } /* Adjusted */
+.text-blue-600 { color: #3468c0; } /* Adjusted */
+.text-blue-200 { color: #a8c9ff; } /* Adjusted */
+.text-blue-100 { color: #d0e0ff; } /* Adjusted */
+.text-white { color: #ffffff; }
+.text-red-600 { color: #e74c3c; } /* Adjusted */
+.text-green-600 { color: #27ae60; } /* Adjusted */
+.text-green-700 { color: #1e8449; } /* Adjusted */
+.text-green-800 { color: #145a32; } /* Adjusted */
+.text-purple-600 { color: #9333ea; } /* Adjusted */
+.text-purple-700 { color: #6c3483; } /* Adjusted */
+.text-purple-800 { color: #4a235a; } /* Adjusted */
+.text-indigo-600 { color: #5d3fbc; } /* Adjusted */
+.text-indigo-700 { color: #4a3299; } /* Adjusted */
+.text-indigo-800 { color: #3a257a; } /* Adjusted */
+
+
+/* Transitions and Transforms */
+.transition-all {
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms; /* Slightly longer for smoother effects */
+}
+
+.transition-colors {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.transition-shadow {
+    transition-property: box-shadow;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 400ms; /* Longer for shadow depth */
+}
+
+.duration-200 {
+    transition-duration: 200ms;
+}
+
+.duration-300 {
+    transition-duration: 300ms;
+}
+
+.hover\:scale-105:hover {
+    transform: scale(1.03); /* Slightly less aggressive scale */
+}
+
+.hover\:-translate-y-1:hover {
+    transform: translateY(-0.35rem); /* More pronounced lift */
+}
+
+.hover\:underline:hover {
+    text-decoration: underline;
+}
+
+/* Specific Component Styles */
+
+/* Navbar */
+nav.sticky {
+    position: sticky;
+    top: 0;
+    /* Apply subtle glassmorphism to navbar */
+    background-color: rgba(26, 58, 107, 0.9); /* Slightly transparent */
+    backdrop-filter: blur(8px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(8px); /* For Safari */
+}
+
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+/* College Hub Brand Color */
+#nav-home-brand {
+    color: #00DDFF; /* Vivid Cyan color for College Hub */
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+#nav-home-brand:hover {
+    color: #72FFC5; /* Lighter accent on hover */
+}
+
+/* Nav Links Hover Effect */
+.nav-link,.nav-link-mobile {
+    position: relative;
+    overflow: hidden;
+}
+
+.nav-link::after,.nav-link-mobile::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #00DDFF; /* Vivid Cyan underline */
+    transform: translateX(-100%);
+    transition: transform 0.3s ease-out;
+}
+
+.nav-link:hover::after,.nav-link-mobile:hover::after {
+    transform: translateX(0);
+}
+
+
+/* Mobile Menu Button (SVG icons) */
+#mobile-menu-button svg {
+    display: block; /* Ensure SVG is block for proper sizing */
+}
+
+/* Mobile Menu Dropdown */
+#mobile-menu-dropdown {
+    width: 100%; /* Ensure it spans full width */
+}
+
+#mobile-menu-dropdown.nav-link-mobile {
+    text-align: left; /* Align text to left */
+}
+
+#mobile-menu-dropdown button {
+    text-align: left; /* Align logout button text to left */
+}
+
+/* Home Page Info Cards (General Styling) */
+.info-card {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white for glassmorphism */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border for glass effect */
+    padding: 1.5rem; /* p-6 */
+    border-radius: 0.75rem; /* rounded-lg */
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1); /* Enhanced shadow for depth */
+    transition: all 0.3s ease-in-out; /* Smooth transition for all properties */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align text to left within cards */
+    text-align: left; /* Ensure text is left-aligned */
+    position: relative; /* Needed for potential glowing border effect */
+    overflow: hidden; /* Ensure glow stays within bounds */
+}
+
+/* Card Hover Effect with subtle glow */
+.info-card:hover {
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15), 0 0 20px rgba(0, 221, 255, 0.4); /* More pronounced shadow + subtle glow */
+    transform: translateY(-0.5rem); /* More pronounced lift effect */
+    border-color: rgba(0, 221, 255, 0.5); /* Highlight border on hover with accent color */
+}
+
+/* Specific styling for the facility cards on index.html */
+#home-page-content.info-card.text-left.bg-gray-50 { /* Targeting the facility cards specifically */
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly more opaque for these cards */
+    backdrop-filter: blur(12px); /* Stronger blur for these cards */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+    align-items: center; /* Center content for these cards */
+    text-align: center; /* Center text for these cards */
+    padding: 2rem; /* More padding */
+}
+
+#home-page-content.info-card.text-left.bg-gray-50:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 0 15px rgba(0, 221, 255, 0.3); /* More pronounced hover shadow + subtle glow */
+    transform: translateY(-5px);
+}
+
+#home-page-content.info-card.text-left.bg-gray-50 h3 {
+    font-size: 1.75rem; /* Larger heading for these cards */
+    margin-bottom: 1rem;
+}
+
+/* General Page Content (main content wrapper) */
+.page-content {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white for glassmorphism */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px); /* For Safari */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    padding: 2.5rem; /* More padding */
+    border-radius: 0.75rem; /* More rounded */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.05); /* Enhanced shadow */
+}
+
+/* Responsive Grid Layouts */
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) { /* md breakpoint */
+   .md\:hidden {
+        display: none!important;
+    }
+   .md\:flex {
+        display: flex!important;
+    }
+   .md\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+   .md\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) { /* lg breakpoint */
+   .lg\:grid-cols-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+   .lg\:grid-cols-2 { /* Added for specific 2-column layout on large screens */
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* Message Box for alerts */
+#message-box.error {
+    background-color: #fde8e8; /* bg-red-100 */
+    color: #c0392b; /* text-red-800 */
+    border: 1px solid #e74c3c; /* border-red-400 */
+}
+
+#message-box.success {
+    background-color: #d4edda; /* bg-green-100 */
+    color: #28a745; /* text-green-800 */
+    border: 1px solid #2ecc71; /* border-green-400 */
+}
+
+/* Carousel Specific Styles */
+#carousel-container {
+    position: relative;
+    width: 100%;
+    max-width: 896px; /* max-w-4xl */
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    border-radius: 0.75rem; /* rounded-lg */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1), 0 5px 15px rgba(0, 0, 0, 0.05); /* shadow-lg */
+    margin-bottom: 2rem; /* mb-8 */
+    background-color: rgba(255, 255, 255, 0.1); /* Glassmorphism background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.carousel-slide {
+    width: 100%;
+    display: flex; /* Use flex to center caption */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: opacity 0.6s ease-in-out; /* Smooth transition for slides */
+    height: 400px; /* Fixed height for consistency */
+}
+
+.carousel-slide img {
+    width: 100%;
+    height: 100%; /* Fill the fixed height */
+    display: block;
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.carousel-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker overlay */
+    color: white;
+    padding: 1rem 1.5rem; /* More padding */
+    font-size: 1.4rem; /* Larger font */
+    font-weight: 600;
+    text-align: center;
+    border-bottom-left-radius: 0.75rem;
+    border-bottom-right-radius: 0.75rem;
+    transform: translateY(0); /* Ensure it's visible */
+    transition: transform 0.3s ease-out;
+}
+
+/* Optional: Hide caption on hover for a subtle effect */
+/*.carousel-slide:hover.carousel-caption {
+    transform: translateY(100%);
+} */
+
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly darker */
+    color: white;
+    border: none;
+    padding: 0.75rem 0.6rem; /* Adjusted padding */
+    cursor: pointer;
+    font-size: 1.8rem; /* Larger arrows */
+    line-height: 1;
+    border-radius: 0.5rem; /* rounded-md */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.carousel-control:hover {
+    background-color: rgba(0, 0, 0, 0.9); /* Darker on hover */
+    transform: translateY(-50%) scale(1.1); /* Slight scale effect */
+}
+
+.carousel-prev-btn {
+    left: 1rem;
+}
+
+.carousel-next-btn {
+    right: 1rem;
+}
+
+.carousel-dots-container {
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 0.6rem; /* Slightly more space between dots */
+    z-index: 10;
+}
+
+.carousel-dot {
+    width: 12px; /* Larger dots */
+    height: 12px; /* Larger dots */
+    background-color: rgba(255, 255, 255, 0.6); /* Slightly more opaque */
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Subtle border for dots */
+}
+
+.carousel-dot.active {
+    background-color: #00DDFF; /* Active dot color */
+    transform: scale(1.3); /* More pronounced active state */
+    border-color: #00DDFF; /* Blue border for active dot */
+}
+
+/* Buttons - General Styling */
+button,.info-card a.inline-block {
+    display: inline-block;
+    padding: 0.75rem 1.5rem; /* py-3 px-5 equivalent */
+    border-radius: 0.5rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for buttons */
+}
+
+/* Specific Button Colors */
+.bg-blue-600 { /* For general buttons */
+    background-color: #3468c0;
+    color: white;
+}
+.bg-blue-600:hover {
+    background-color: #2a5298; /* Darker blue on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+}
+
+.bg-green-600 { /* For admissions buttons */
+    background-color: #27ae60;
+    color: white;
+}
+.bg-green-600:hover {
+    background-color: #1e8449; /* Darker green on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.bg-red-600 { /* For logout buttons */
+    background-color: #e74c3c;
+    color: white;
+}
+.bg-red-600:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Notice Page Specifics */
+.page-content.space-y-6 > div {
+    border-radius: 0.75rem;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    background-color: rgba(255, 255, 255, 0.15); /* Glassmorphism background */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.page-content.space-y-6 > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12), 0 0 15px rgba(0, 221, 255, 0.3); /* Subtle glow on hover [4] */
+}
+
+/* Border colors for notices */
+.border-l-4.border-blue-500 { border-left-color: #00DDFF; } /* Using the accent color */
+.border-l-4.border-green-500 { border-left-color: #2ecc71; }
+.border-l-4.border-purple-500 { border-left-color: #9b59b6; }
+
+/* Adjustments for the "Welcome To Our Site" section on index.html */
+#home-page-content h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+}
+
+#home-page-content.info-card.text-left.bg-gray-50 { /* Targeting the facility cards specifically */
+    background-color: rgba(255, 255, 255, 0.15); /* Slightly more opaque for these cards */
+    backdrop-filter: blur(12px); /* Stronger blur for these cards */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08); /* Lighter shadow */
+}
+
+#home-page-content.info-card.text-left.bg-gray-50:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12), 0 0 15px rgba(0, 221, 255, 0.3); /* More pronounced hover shadow + subtle glow */
+    transform: translateY(-5px);
+}
+
+/* Icons for facility cards (if you add them in HTML) */
+.info-card.icon-placeholder {
+    width: 60px;
+    height: 60px;
+    background-color: #3468c0; /* Blue background for icons */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+    color: white;
+    font-size: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific icon colors for facility cards */
+#home-page-content.info-card:nth-child(1).icon-placeholder { background-color: #f39c12; } /* Orange for Scholarship */
+#home-page-content.info-card:nth-child(2).icon-placeholder { background-color: #2ecc71; } /* Green for Library */
+#home-page-content.info-card:nth-child(3).icon-placeholder { background-color: #9b59b6; } /* Purple for Lab */
+#home-page-content.info-card:nth-child(4).icon-placeholder { background-color: #e74c3c; } /* Red for Sports */
+
+
+/* Responsive adjustments */
+@media (max-width: 767px) {
+   .page-content {
+        padding: 1.5rem;
+    }
+   .carousel-slide {
+        height: 250px; /* Shorter carousel on mobile */
+    }
+   .carousel-caption {
+        font-size: 1.1rem;
+        padding: 0.8rem 1rem;
+    }
+   .carousel-control {
+        font-size: 1.5rem;
+        padding: 0.5rem 0.4rem;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notice: Workshop on Advanced Web Development - College Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+    <nav class="bg-blue-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">
+                <a href="index.html" id="nav-home-brand" class="hover:text-blue-200 transition-colors duration-200">
+                    College Hub
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="mobile-menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="mobile-menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Home</a>
+                <a href="about-us.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
+                <a href="academics.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Academics</a>
+                <a href="research.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Research</a>
+                <a href="admissions.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Admissions</a>
+                <a href="notice.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Notice</a>
+                <span id="welcome-message" class="text-blue-200 text-sm">Welcome, Guest!</span>
+                <button
+                    id="logout-button"
+                    class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md"
+                >
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu-dropdown" class="md:hidden bg-blue-700 py-2 mt-2 rounded-md shadow-lg hidden">
+            <a href="index.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Home</a>
+            <a href="about-us.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">About Us</a>
+            <a href="academics.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Academics</a>
+            <a href="research.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Research</a>
+            <a href="admissions.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Admissions</a>
+            <a href="notice.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Notice</a>
+            <div class="px-4 py-2 text-blue-200 text-sm border-t border-blue-600 mt-2 pt-2">Welcome, Guest!</div>
+            <button
+                id="logout-button-mobile"
+                class="w-full text-left px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 font-semibold rounded-b-md"
+            >
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <div id="notice2-page-content" class="page-content container mx-auto p-8 flex-grow">
+        <h1 class="text-4xl font-bold text-blue-800 mb-6">Workshop on Advanced Web Development</h1>
+        <p class="text-lg text-gray-700 mb-4">
+            <span class="font-semibold">Date:</span> July 8, 2025
+        </p>
+        <p class="text-lg text-gray-700 mb-8">
+            The Computer Science Department is pleased to announce a comprehensive workshop on "Advanced Web Development with React and Node.js." This two-day intensive workshop will be held on **July 25th and 26th, from 9:00 AM to 5:00 PM daily, in the Main Computer Lab**. It is designed for students interested in building modern, full-stack web applications. Topics will include React fundamentals, Node.js backend development, API integration, and database connectivity.
+        </p>
+        <p class="text-lg text-gray-700 mb-8">
+            Interested students are required to register through the student portal by **July 20th**. Limited seats are available to ensure an interactive learning environment. Don't miss this opportunity to enhance your web development skills!
+        </p>
+        <p class="text-lg text-gray-700 mb-8">
+            For registration and more details, please visit the <a href="#" class="text-green-600 hover:underline font-semibold">Student Portal</a>.
+        </p>
+
+        <div class="mt-10 text-center">
+            <a href="notice.html" class="inline-block bg-blue-600 text-white py-2 px-5 rounded-md hover:bg-blue-700 transition-colors duration-200 font-semibold shadow-lg">
+                Back to Notices
+            </a>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

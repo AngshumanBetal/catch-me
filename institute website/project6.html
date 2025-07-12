@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project 6: Supply Chain Optimization using AI - College Hub Research</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body class="font-inter min-h-screen bg-gray-100 text-gray-800 flex flex-col">
+    <nav class="bg-blue-800 p-4 shadow-lg sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">
+                <a href="index.html" id="nav-home-brand" class="hover:text-blue-200 transition-colors duration-200">
+                    College Hub
+                </a>
+            </div>
+
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path id="mobile-menu-icon-open" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        <path id="mobile-menu-icon-close" class="hidden" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="index.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Home</a>
+                <a href="about-us.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">About Us</a>
+                <a href="academics.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Academics</a>
+                <a href="research.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Research</a>
+                <a href="admissions.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Admissions</a>
+                <a href="notice.html" class="nav-link text-blue-100 hover:text-white hover:bg-blue-700 font-medium py-2 px-4 rounded-md transition-colors duration-200">Notice</a>
+                <span id="welcome-message" class="text-blue-200 text-sm">Welcome, Guest!</span>
+                <button
+                    id="logout-button"
+                    class="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-md transition-colors duration-200 shadow-md"
+                >
+                    Logout
+                </button>
+            </div>
+        </div>
+
+        <div id="mobile-menu-dropdown" class="md:hidden bg-blue-700 py-2 mt-2 rounded-md shadow-lg hidden">
+            <a href="index.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Home</a>
+            <a href="about-us.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">About Us</a>
+            <a href="academics.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Academics</a>
+            <a href="research.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Research</a>
+            <a href="admissions.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Admissions</a>
+            <a href="notice.html" class="nav-link-mobile block py-2 px-4 text-white hover:bg-blue-600 font-medium rounded-md transition-colors duration-200">Notice</a>
+            <div class="px-4 py-2 text-blue-200 text-sm border-t border-blue-600 mt-2 pt-2">Welcome, Guest!</div>
+            <button
+                id="logout-button-mobile"
+                class="w-full text-left px-4 py-2 text-white bg-red-600 hover:bg-red-700 transition-colors duration-200 font-semibold rounded-b-md"
+            >
+                Logout
+            </button>
+        </div>
+    </nav>
+
+    <div id="project6-page-content" class="page-content container mx-auto p-8 flex-grow">
+        <h1 class="text-4xl font-bold text-blue-800 mb-6">Project 6: Supply Chain Optimization using AI</h1>
+        <p class="text-lg text-gray-700 mb-8">
+            This research project explores how Artificial Intelligence (AI) can revolutionize supply chain management by enhancing efficiency, reactivity, and resilience. It focuses on leveraging AI to optimize logistics, inventory, demand forecasting, and risk management, transforming traditional supply chain methodologies.
+        </p>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">How AI Transforms Supply Chains: Key Methodologies</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            AI-driven supply chain optimization utilizes data-driven methodologies and advanced analytics:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li><span class="font-semibold">Predictive Analytics:</span> Uses historical data, statistical techniques, and machine learning algorithms to forecast demand patterns, anticipate disruptions, and optimize inventory levels.</li>
+            <li><span class="font-semibold">Real-time Data Interpretation:</span> AI systems can collect and interpret real-time data from various sources (e.g., social media trends, economic indicators, weather patterns) to provide precise and dynamic predictions. [5]</li>
+            <li><span class="font-semibold">Machine Learning Algorithms:</span> Continuously learn from data, adapting to fluctuations in demand patterns and mitigating risks associated with overstocking or stockouts. [6, 5]</li>
+            <li><span class="font-semibold">Automation:</span> Automates tasks like data collection, processing, and analysis, freeing up resources for strategic decisions. [5]</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Key Benefits and Advantages</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            Implementing AI in supply chain management offers numerous advantages:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li><span class="font-semibold">Enhanced Demand Forecasting:</span> Significantly improves the accuracy of anticipating customer demand, revenue, and profitability.</li>
+            <li><span class="font-semibold">Streamlined Inventory Control:</span> Optimizes inventory levels and distribution, minimizing excess stock and reducing costs.</li>
+            <li><span class="font-semibold">Optimized Logistics Operations:</span> Improves fleet management, forecasts vehicle maintenance, and optimizes fuel use, contributing to reduced carbon footprints. [5]</li>
+            <li><span class="font-semibold">Strengthened Risk Management:</span> Enables early detection of potential disruptions (e.g., natural disasters, political instability, cyberattacks) and proactive responses.</li>
+            <li><span class="font-semibold">Improved Supplier Relationship Management:</span> Aids in identifying suitable suppliers by evaluating performance, dependability, and cost-efficiency. [5]</li>
+            <li><span class="font-semibold">Increased Resilience:</span> Bolsters the robustness of supply networks, ensuring continuity and competitiveness in volatile global markets.</li>
+            <li><span class="font-semibold">Democratization of AI for SMEs:</span> Makes AI technologies more accessible and affordable for small and medium enterprises, allowing them to compete more effectively. [5]</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Specific Use Cases and Applications</h2>
+        <p class="text-lg text-gray-700 mb-4">
+            AI-powered supply chain optimization is applied across various operational aspects:
+        </p>
+        <ul class="list-disc list-inside text-lg text-gray-700 space-y-2 mb-8">
+            <li><span class="font-semibold">Demand Forecasting:</span> Anticipating customer demand and revenue with greater accuracy.</li>
+            <li><span class="font-semibold">Inventory Optimization:</span> Adjusting inventory levels and distribution based on anticipated demand shifts.</li>
+            <li><span class="font-semibold">Risk Mitigation:</span> Identifying potential disruptions (e.g., supplier bankruptcies, transportation delays) before they occur.</li>
+            <li><span class="font-semibold">Route Optimization:</span> Predicting traffic, weather, or geopolitical tensions to adjust shipping routes proactively.</li>
+            <li><span class="font-semibold">Supplier Risk Assessment:</span> Continuously evaluating supplier reliability based on data trends.</li>
+        </ul>
+
+        <h2 class="text-3xl font-bold text-blue-700 mb-4">Challenges and Future Outlook</h2>
+        <p class="text-lg text-gray-700 mb-8">
+            While highly beneficial, the implementation of AI in supply chains faces challenges such as the intricacy of AI systems, dependency on extensive and quality data, and ensuring compliance with data security and privacy legislation. Despite these, predictive analytics is emerging as a cornerstone of digital transformation in supply chains, with increasing demand for automation and data volume driving its adoption. The future emphasizes hyper-personalized demand fulfillment, sustainability goals, and end-to-end visibility.
+        </p>
+
+        <div class="mt-10 text-center">
+            <p class="text-lg text-gray-700">
+                For more details on this project or to explore collaboration opportunities, please contact our research department.
+            </p>
+            <p class="text-lg text-gray-700 mt-2">
+                Email: <a href="mailto:research@college.edu" class="text-blue-600 hover:underline">research@college.edu</a>
+            </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
