@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gemini AI Chatbot</title>
+    <!-- Tailwind CSS CDN - This would typically be linked externally or built -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Inter font - This would typically be linked externally -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS - Link to your separate style.css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="messages-area" id="messagesArea">
+            <div class="message-bubble ai">
+                <p>Hello! I'm your AI chatbot. How can I help you today?</p>
+            </div>
+            <div class="loading-indicator" id="loadingIndicator">
+                <p>AI is thinking...</p>
+            </div>
+        </div>
+        <div class="input-area">
+            <input type="text" id="messageInput" placeholder="Type your message..." autocomplete="off">
+            <button id="sendMessageBtn">Send</button>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript - Link to your separate script.js file -->
+    <script src="script.js"></script>
+</body>
+</html>
